@@ -10,11 +10,11 @@ const Form = ({submitRegister}) => {
         email: yup.string().required(<span>Email Obrigatório</span>).email("Email Inválido"),
         password: yup.string().required(<span>Senha Obrigatória</span>),
         confirmPassword: yup.string().required(<span>Confirmar Senha Obrigatória</span>).oneOf([yup.ref("password"), null], "Senha Diferente"),
-        cpf: yup.string().required(<span>CPF Obrigatório</span>).min(11).max(11),
-        day: yup.string().required(<span>Dia Obrigatório</span>).max(2),
-        month: yup.string().required(<span>Mês Obrigatório</span>).max(2),
-        year: yup.string().required(<span>Ano Obrigatório</span>).min(4).max(4),
-        terms: yup.string().required(<span>Termos de Serviço Obrigatório</span>),
+        cpf: yup.string().required(<span>CPF Obrigatório</span>).length(11),
+        day: yup.number().required(<span>Dia Obrigatório</span>).min(1).max(31),
+        month: yup.number().required(<span>Mês Obrigatório</span>).min(1).max(12),
+        year: yup.string().required(<span>Ano Obrigatório</span>).length(4),
+        terms: yup.boolean().required().oneOf([true], <span>Termos de Serviço Obrigatório</span>),
     })
 
     const { register, handleSubmit, formState: {errors}} = useForm({
