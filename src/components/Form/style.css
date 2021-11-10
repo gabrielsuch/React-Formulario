@@ -1,0 +1,71 @@
+.register{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;;
+    padding: 30px;
+}
+.alreadyHaveAccount{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.alreadyHaveAccount p{
+    color: white;
+    cursor: pointer;
+}
+.register form .terms{
+    color: white;
+}
+.inputName, .inputEmail, .inputPassword, .inputCpf, .inputDateBirth{
+    color: red;
+}
+.inputName, .inputEmail, .inputName input, .inputEmail input, .inputCpf, .inputCpf input{
+    width: 100%;
+} 
+.inputPassword, .inputDateBirth{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.inputPassword .firstPassword, .inputPassword .secondPassword{
+    width: 45%;
+}
+.inputPassword .firstPassword input, .inputPassword .secondPassword input{
+    width: 100%;
+}
+.inputDateBirth .day, .inputDateBirth .month, .inputDateBirth .year{
+    width: 30%;
+}
+.inputDateBirth .day input, .inputDateBirth .month input, .inputDateBirth .year input{
+    width: 100%;
+}
+input{
+    padding: 15px;
+    background-color: #131313;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+button{
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgb(39, 39, 155);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.inputPassword .firstPassword span, .inputPassword .secondPassword span{
+    display: block;
+}
